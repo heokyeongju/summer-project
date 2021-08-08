@@ -1,10 +1,94 @@
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
+   <head>
+     <meta charset="utf-8">
     <title></title>
-  </head>
-  <body>
+
+    <title>메인페이지</title>
+    <style>
+      h1 {
+        font-size:45px;
+        text-align: center;
+        margin:0;
+        padding:20px;
+      }
+      #grid{
+        display: grid;
+        grid-template-rows:1fr 5fr 1fr;
+      }
+      #body-grid{
+        display: grid;
+        grid-template-columns: 150px 1fr;
+      }
+      #header{
+        padding-bottom: 20px;
+        border-bottom:1px solid gray;
+      }
+      #footer{
+        padding-top: 20px;
+        border-top:1px solid gray;
+      }
+      #main-content{
+        background-color: pink;
+        padding: 10px;
+        grid-gap: 10px;
+        grid-template-rows : repeat(3, 1fr);
+      }
+      #nav{
+        background-color: powderblue;
+        padding: 10px;
+      }
+      #profile{
+        height: 200px;
+        justify-content: center;
+        align-items: center;
+      }
+      .article{
+        grid-column: 1;
+        grid-row: 1;
+        height: 200px;
+        border : 1px;
+      }
+    </style>
+   </head>
+   <body>
 메인페이지
-  </body>
-</html>
+    <div id="grid">
+      <header id="header">
+        <h1>헤더</h1>
+      </header>
+      <main  id="body-grid">
+        <div id="nav">
+          <div id="profile">
+            <ol>
+              <li>프로필</li>
+              <li>  LOGIN </li>
+            </ol>
+            <article> article </article>
+          </div>
+          <div>
+            네비게이션
+          </div>
+        </div>
+        <div id="main-content">
+          <div class="article">
+            배너
+            <br>배너입니다
+          </div>
+          <div class="article">
+            공지
+            <br>공지입니다
+          </div>
+          <div class="article">
+            ?
+            <br>미정입니다
+          </div>
+        </div>
+      </main>
+      <footer id="footer">
+        <h1>푸터</h1>
+      </footer>
+
+    </div>
+
+   </body>
+ </html>
